@@ -78,7 +78,8 @@ except ImportError:
     pass
 
 home = os.path.expandvars('$HOME')
-sys.path.append(os.path.join(home, os.environ.get("PYTHONUSERDIR", ".python")))
+user_dir = os.path.join(home, os.environ.get("PYTHONUSERDIR", ".python"))
+sys.path.append(user_dir)
 
 ##### Some settings you may want to change #####
 # Define the editor used by the edit() function. Try to use the editor
@@ -101,7 +102,7 @@ else:
 del editorbase
 
 # The place to store your command history between sessions
-histfile=os.path.join(os.path.expanduser('~'), ".python/history")
+histfile = os.path.join(user_dir, "history.log")
 
 # Functions automatically added to the builtins namespace so that you can
 # use them in the debugger and other unusual environments
