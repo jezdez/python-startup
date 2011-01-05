@@ -1,4 +1,3 @@
-
 # To use this add:
 # import LazyPython
 # sys.excepthook = LazyPython.LazyPython()

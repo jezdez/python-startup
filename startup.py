@@ -1,3 +1,20 @@
+"""
+My Python startup file, carefully gathered from different sources (see below)
+
+Get code from Github::
+
+    git clone https://github.com/jezdez/python-startup.git ~/.python
+
+Put this in your shell profile::
+
+    export PYTHONSTARTUP=$HOME/.python/startup.py
+
+In case you haven't saved these files in $HOME/.python make sure to set
+PYTHONUSERDIR approppriately, too::
+
+    export PYTHONUSERDIR=/path/to/dir
+
+"""
 # python-startup.py
 # Author: Nathan Gray, based on interactive.py by Robin Friedrich and an 
 #           evil innate desire to customize things.
@@ -61,7 +78,7 @@ except ImportError:
     pass
 
 home = os.path.expandvars('$HOME')
-sys.path.append(os.path.join(home, ".python"))
+sys.path.append(os.path.join(home, os.environ.get("PYTHONUSERDIR", ".python")))
 
 ##### Some settings you may want to change #####
 # Define the editor used by the edit() function. Try to use the editor
