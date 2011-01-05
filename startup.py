@@ -102,7 +102,7 @@ else:
 del editorbase
 
 # The place to store your command history between sessions
-histfile = os.path.join(user_dir, "history.log")
+histfile = os.path.join(user_dir, "history")
 
 # Functions automatically added to the builtins namespace so that you can
 # use them in the debugger and other unusual environments
